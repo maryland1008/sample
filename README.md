@@ -1,12 +1,12 @@
 # Sample Spring Application Code
 
 
-## Sample database schema
+## 1. Sample database schema
 
 ![Database schema](db/ERD.png)
 [SQL Script file \[Link\]](db/oracle-hr-example.sql)
 
-## Source directory structure 
+## 2. Source directory structure 
 
 complete Spring Framework Application generated from the DB schema in several minutes
 
@@ -47,7 +47,7 @@ complete Spring Framework Application generated from the DB schema in several mi
 
 ```
 	
-## Met the security scan requirements (without code changes)
+## 3. Met the security scan requirements (without code changes)
 
 HP Fortify Scan - 0 ciritical/ 0 high / 0 medium issues with default security cateogry
 
