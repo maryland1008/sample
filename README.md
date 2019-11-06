@@ -47,13 +47,13 @@ complete Spring Framework Application generated from the DB schema in several mi
 
 ```
 	
-## Met the security scan requirements (without any coding work)
+## Met the security scan requirements (without code changes)
 
 HP Fortify Scan - 0 ciritical/ 0 high / 0 medium issues with default security cateogry
 
 ![HP Fortify Scan - IDE ](sca.png)
 
-[HP Fortify Scan - CWESANSTop25 ](scan CWESANSTop25.pdf)
+[HP Fortify Scan - CWESANSTop25 ](scan_CWESANSTop25.pdf)
 
-[HP Fortify Scan - DeveloperWorkbook ](scan DeveloperWorkbook.pdf)
+[HP Fortify Scan - DeveloperWorkbook ](scan_DeveloperWorkbook.pdf)
 
