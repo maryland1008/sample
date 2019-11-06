@@ -4,7 +4,8 @@
 
 ## Sample database schema
 
-
+![Sample database schema](db/ERD.png)
+![SQL Script file](db/oracle-hr-example.sql)
 
 ## Source directory structure (complete Spring Framework Application generated from the DB schema in several minutes)
 
