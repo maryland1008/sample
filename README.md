@@ -4,7 +4,7 @@
 ## Sample database schema
 
 ![Database schema](db/ERD.png)
-[SQL Script file \[Link\]]](db/oracle-hr-example.sql)
+[SQL Script file \[Link\]](db/oracle-hr-example.sql)
 
 ## Source directory structure 
 
@@ -55,5 +55,5 @@ HP Fortify Scan - 0 ciritical/ 0 high / 0 medium issues with default security ca
 
 [HP Fortify Scan - CWESANSTop25 \[Link\]](scan_CWESANSTop25.pdf)
 
-[HP Fortify Scan - DeveloperWorkbook \[Link\]]](scan_DeveloperWorkbook.pdf)
+[HP Fortify Scan - DeveloperWorkbook \[Link\]](scan_DeveloperWorkbook.pdf)
 
