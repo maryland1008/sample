@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<jsp:root xmlns:jsp='http://java.sun.com/JSP/Page' xmlns:c='http://java.sun.com/jsp/jstl/core' xmlns:sec='http://www.springframework.org/security/tags' xmlns:fn='http://java.sun.com/jsp/jstl/functions' xmlns:form='http://www.springframework.org/tags/form' xmlns:spring='http://www.springframework.org/tags' version='2.1'>
+<jsp:output omit-xml-declaration='true' doctype-root-element='html' doctype-system='about:legacy-compat'/>
+<jsp:directive.page language='java' contentType='text/html;charset=utf-8'/>
+              <h3>CUSTOMER</h3>
+			  <hr/>
+<form:form method='POST' modelAttribute='customer' class='form-horizontal'>			  
+	<div class='form-group'>
+		<label class='control-label col-xs-2 text-right bg-info'><spring:message code='Customer.custId.label' /></label>
+		<div class='col-xs-8'><form:input id='custId' path='custId' class='form-control' type='text' /></div>
+	</div>
+	<div class='form-group'>
+		<label class='control-label col-xs-2 text-right bg-info'><spring:message code='Customer.address.label' /></label>
+		<div class='col-xs-8'><form:input id='address' path='address' class='form-control' type='text' /></div>
+	</div>
+	<div class='form-group'>
+		<label class='control-label col-xs-2 text-right bg-info'><spring:message code='Customer.city.label' /></label>
+		<div class='col-xs-8'><form:input id='city' path='city' class='form-control' type='text' /></div>
+	</div>
+	<div class='form-group'>
+		<label class='control-label col-xs-2 text-right bg-info'><spring:message code='Customer.custTypeCd.label' /></label>
+		<div class='col-xs-8'><form:input id='custTypeCd' path='custTypeCd' class='form-control' type='text' /></div>
+	</div>
+	<div class='form-group'>
+		<label class='control-label col-xs-2 text-right bg-info'><spring:message code='Customer.fedId.label' /></label>
+		<div class='col-xs-8'><form:input id='fedId' path='fedId' class='form-control' type='text' /></div>
+	</div>
+	<div class='form-group'>
+		<label class='control-label col-xs-2 text-right bg-info'><spring:message code='Customer.postalCode.label' /></label>
+		<div class='col-xs-8'><form:input id='postalCode' path='postalCode' class='form-control' type='text' /></div>
+	</div>
+	<div class='form-group'>
+		<label class='control-label col-xs-2 text-right bg-info'><spring:message code='Customer.state.label' /></label>
+		<div class='col-xs-8'><form:input id='state' path='state' class='form-control' type='text' /></div>
+	</div>
+<hr/>
+<div class='btn-toolbar'>
+    <div class='btn-group'>
+        <input type='submit' class='btn btn-default' value='Save'/>
+    </div>
+    <div class='btn-group'>
+<c:choose>
+<c:when test = '${not empty customer.custId}'>    
+        <a href='/db/customerView?custId=${fn:escapeXml(customer.custId)}' class='btn btn-default'>Cancel</a>
+</c:when>
+<c:otherwise>
+        <a href='/db/customer' class='btn btn-default'>Return</a>
+</c:otherwise>
+</c:choose>        	
+    </div>
+</div>
+</form:form>
+</jsp:root>

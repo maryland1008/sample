@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<jsp:root xmlns:jsp='http://java.sun.com/JSP/Page' xmlns:c='http://java.sun.com/jsp/jstl/core' xmlns:sec='http://www.springframework.org/security/tags' xmlns:fn='http://java.sun.com/jsp/jstl/functions' xmlns:fmt='http://java.sun.com/jsp/jstl/fmt' xmlns:spring='http://www.springframework.org/tags' version='2.1'>
+<jsp:output omit-xml-declaration='true' doctype-root-element='html' doctype-system='about:legacy-compat'/>
+<jsp:directive.page language='java' contentType='text/html;charset=utf-8'/>
+              <h3>BRANCH</h3>
+<form action='/db/branch' method='post' class='form-inline'>
+   	<label for='attr'>Search: </label>
+    <div class='form-group'>
+    	<select id='attr' name='attr' class='form-control'>
+    		<option />
+<option value='branchId'><spring:message code='Branch.branchId.label' /></option>
+<option value='address'><spring:message code='Branch.address.label' /></option>
+<option value='city'><spring:message code='Branch.city.label' /></option>
+<option value='name'><spring:message code='Branch.name.label' /></option>
+<option value='state'><spring:message code='Branch.state.label' /></option>
+<option value='zipCode'><spring:message code='Branch.zipCode.label' /></option>
+    	</select>
+    </div>
+    =
+    <div class='form-group'>
+        <input type='text' name='value' class='form-control' placeholder='Value'/>
+    </div>
+    <button type='submit' class='btn btn-default'>Apply</button>
+</form>
+<hr/>
+<div class='table-responsive pre-scrollable'> 
+    <table class='table table-bordered table-striped sortable'>
+        <thead>
+            <tr>
+<th><spring:message code='Branch.branchId.label' /></th>
+<th><spring:message code='Branch.address.label' /></th>
+<th><spring:message code='Branch.city.label' /></th>
+<th><spring:message code='Branch.name.label' /></th>
+<th><spring:message code='Branch.state.label' /></th>
+<th><spring:message code='Branch.zipCode.label' /></th>
+<th></th>
+			</tr>
+        </thead>
+        <tbody>
+			<c:forEach items='${branch}' var='item'>
+            <tr>
+<td>
+<c:out value='${item.branchId}' />
+</td>
+<td>
+<c:out value='${item.address}' />
+</td>
+<td>
+<c:out value='${item.city}' />
+</td>
+<td>
+<c:out value='${item.name}' />
+</td>
+<td>
+<c:out value='${item.state}' />
+</td>
+<td>
+<c:out value='${item.zipCode}' />
+</td>
+<td><a href='/db/branchView?branchId=${fn:escapeXml(item.branchId)}'>View</a></td>
+			</tr>
+			</c:forEach>
+        </tbody>
+    </table>
+</div>		
+<hr/>
+<div class='btn-toolbar'>
+    <div class='btn-group'>
+        <a href='/db/branch/add' class='btn btn-primary'>Add New Record</a>
+    </div>
+    <div class='btn-group'>
+        <a href='/db/' class='btn btn-default'>Return</a>
+    </div>
+</div>	  
+</jsp:root>

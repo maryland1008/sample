@@ -1,0 +1,16 @@
+<jsp:root xmlns:jsp='http://java.sun.com/JSP/Page' xmlns:c='http://java.sun.com/jsp/jstl/core' xmlns:fn='http://java.sun.com/jsp/jstl/functions' xmlns:sec='http://www.springframework.org/security/tags' xmlns:tiles='http://tiles.apache.org/tags-tiles' version='2.1'>
+<jsp:directive.page language='java' contentType='text/html;charset=utf-8'/>
+<div id='noaa-logo'>
+	<a href='http://www.noaa.gov'><img src='${pageContext.request.contextPath}/resources/imgs/header_title.gif' alt='NOAA Logo'/></a>
+</div>
+<div class='hidden-xs'>
+	<div id='doc-logo'>
+		<a href='http://www.doc.gov'><img src='${pageContext.request.contextPath}/resources/imgs/header_commerce.gif' alt='Department of Commerce Logo'/></a>
+	</div>
+	<div id='app-logo'>
+		<div class='header-title'>Bank Web App Demo</div> 
+		<div class='header-desc'>National Oceanic And Atmospheric Administration</div>
+	</div>
+</div>
+<div class='visible-xs header-title-mobile'>FNRS Back Office</div>
+</jsp:root>

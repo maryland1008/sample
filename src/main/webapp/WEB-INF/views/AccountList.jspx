@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<jsp:root xmlns:jsp='http://java.sun.com/JSP/Page' xmlns:c='http://java.sun.com/jsp/jstl/core' xmlns:sec='http://www.springframework.org/security/tags' xmlns:fn='http://java.sun.com/jsp/jstl/functions' xmlns:fmt='http://java.sun.com/jsp/jstl/fmt' xmlns:spring='http://www.springframework.org/tags' version='2.1'>
+<jsp:output omit-xml-declaration='true' doctype-root-element='html' doctype-system='about:legacy-compat'/>
+<jsp:directive.page language='java' contentType='text/html;charset=utf-8'/>
+              <h3>ACCOUNT</h3>
+<form action='/db/account' method='post' class='form-inline'>
+   	<label for='attr'>Search: </label>
+    <div class='form-group'>
+    	<select id='attr' name='attr' class='form-control'>
+    		<option />
+<option value='accountId'><spring:message code='Account.accountId.label' /></option>
+<option value='availBalance'><spring:message code='Account.availBalance.label' /></option>
+<option value='closeDate'><spring:message code='Account.closeDate.label' /></option>
+<option value='lastActivityDate'><spring:message code='Account.lastActivityDate.label' /></option>
+<option value='openDate'><spring:message code='Account.openDate.label' /></option>
+<option value='pendingBalance'><spring:message code='Account.pendingBalance.label' /></option>
+<option value='status'><spring:message code='Account.status.label' /></option>
+<option value='custId'><spring:message code='Account.custId.label' /></option>
+<option value='openBranchId'><spring:message code='Account.openBranchId.label' /></option>
+<option value='openEmpId'><spring:message code='Account.openEmpId.label' /></option>
+<option value='productCd'><spring:message code='Account.productCd.label' /></option>
+    	</select>
+    </div>
+    =
+    <div class='form-group'>
+        <input type='text' name='value' class='form-control' placeholder='Value'/>
+    </div>
+    <button type='submit' class='btn btn-default'>Apply</button>
+</form>
+<hr/>
+<div class='table-responsive pre-scrollable'> 
+    <table class='table table-bordered table-striped sortable'>
+        <thead>
+            <tr>
+<th><spring:message code='Account.accountId.label' /></th>
+<th><spring:message code='Account.availBalance.label' /></th>
+<th><spring:message code='Account.closeDate.label' /></th>
+<th><spring:message code='Account.lastActivityDate.label' /></th>
+<th><spring:message code='Account.openDate.label' /></th>
+<th><spring:message code='Account.pendingBalance.label' /></th>
+<th><spring:message code='Account.status.label' /></th>
+<th><spring:message code='Account.custId.label' /></th>
+<th><spring:message code='Account.openBranchId.label' /></th>
+<th><spring:message code='Account.openEmpId.label' /></th>
+<th><spring:message code='Account.productCd.label' /></th>
+<th></th>
+			</tr>
+        </thead>
+        <tbody>
+			<c:forEach items='${account}' var='item'>
+            <tr>
+<td>
+<c:out value='${item.accountId}' />
+</td>
+<td>
+<c:out value='${item.availBalance}' />
+</td>
+<td>
+<fmt:formatDate pattern='MM/dd/yyyy' value ='${item.closeDate}' />
+</td>
+<td>
+<fmt:formatDate pattern='MM/dd/yyyy' value ='${item.lastActivityDate}' />
+</td>
+<td>
+<fmt:formatDate pattern='MM/dd/yyyy' value ='${item.openDate}' />
+</td>
+<td>
+<c:out value='${item.pendingBalance}' />
+</td>
+<td>
+<c:out value='${item.status}' />
+</td>
+<td>
+<c:out value='${item.custId}' />
+</td>
+<td>
+<c:out value='${item.openBranchId}' />
+</td>
+<td>
+<c:out value='${item.openEmpId}' />
+</td>
+<td>
+<c:out value='${item.productCd}' />
+</td>
+<td><a href='/db/accountView?accountId=${fn:escapeXml(item.accountId)}'>View</a></td>
+			</tr>
+			</c:forEach>
+        </tbody>
+    </table>
+</div>		
+<hr/>
+<div class='btn-toolbar'>
+    <div class='btn-group'>
+        <a href='/db/account/add' class='btn btn-primary'>Add New Record</a>
+    </div>
+    <div class='btn-group'>
+        <a href='/db/' class='btn btn-default'>Return</a>
+    </div>
+</div>	  
+</jsp:root>

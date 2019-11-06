@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<jsp:root xmlns:jsp='http://java.sun.com/JSP/Page' xmlns:c='http://java.sun.com/jsp/jstl/core' xmlns:sec='http://www.springframework.org/security/tags' xmlns:fn='http://java.sun.com/jsp/jstl/functions' version='2.1'>
+<jsp:output omit-xml-declaration='true' doctype-root-element='html' doctype-system='about:legacy-compat'/>
+<jsp:directive.page language='java' contentType='text/html;charset=utf-8'/>
+<h2>PRODUCT_TYPE</h2>
+<p></p>
+<div class='table-responsive pre-scrollable'> 
+    <table class='table table-bordered table-striped sortable'>
+        <thead><tr> <th> # </th> <th>Name</th> <th>Schema</th> <th>Primary Key</th> </tr></thead>
+        <tbody>
+<tr>
+<td align='right'>1</td>
+<td><a href='accTransaction'>ACC_TRANSACTION</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>2</td>
+<td><a href='account'>ACCOUNT</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>3</td>
+<td><a href='branch'>BRANCH</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>4</td>
+<td><a href='business'>BUSINESS</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>5</td>
+<td><a href='customer'>CUSTOMER</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>6</td>
+<td><a href='department'>DEPARTMENT</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>7</td>
+<td><a href='employee'>EMPLOYEE</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>8</td>
+<td><a href='individual'>INDIVIDUAL</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>9</td>
+<td><a href='officer'>OFFICER</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>10</td>
+<td><a href='product'>PRODUCT</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+<tr>
+<td align='right'>11</td>
+<td><a href='productType'>PRODUCT_TYPE</a> </td>
+<td>HYANG</td>
+<td>
+1 column(s)
+</td>
+</tr>
+        </tbody>
+    </table>
+</div>			  
+</jsp:root>

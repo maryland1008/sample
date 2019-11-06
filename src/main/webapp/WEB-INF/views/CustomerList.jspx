@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<jsp:root xmlns:jsp='http://java.sun.com/JSP/Page' xmlns:c='http://java.sun.com/jsp/jstl/core' xmlns:sec='http://www.springframework.org/security/tags' xmlns:fn='http://java.sun.com/jsp/jstl/functions' xmlns:fmt='http://java.sun.com/jsp/jstl/fmt' xmlns:spring='http://www.springframework.org/tags' version='2.1'>
+<jsp:output omit-xml-declaration='true' doctype-root-element='html' doctype-system='about:legacy-compat'/>
+<jsp:directive.page language='java' contentType='text/html;charset=utf-8'/>
+              <h3>CUSTOMER</h3>
+<form action='/db/customer' method='post' class='form-inline'>
+   	<label for='attr'>Search: </label>
+    <div class='form-group'>
+    	<select id='attr' name='attr' class='form-control'>
+    		<option />
+<option value='custId'><spring:message code='Customer.custId.label' /></option>
+<option value='address'><spring:message code='Customer.address.label' /></option>
+<option value='city'><spring:message code='Customer.city.label' /></option>
+<option value='custTypeCd'><spring:message code='Customer.custTypeCd.label' /></option>
+<option value='fedId'><spring:message code='Customer.fedId.label' /></option>
+<option value='postalCode'><spring:message code='Customer.postalCode.label' /></option>
+<option value='state'><spring:message code='Customer.state.label' /></option>
+    	</select>
+    </div>
+    =
+    <div class='form-group'>
+        <input type='text' name='value' class='form-control' placeholder='Value'/>
+    </div>
+    <button type='submit' class='btn btn-default'>Apply</button>
+</form>
+<hr/>
+<div class='table-responsive pre-scrollable'> 
+    <table class='table table-bordered table-striped sortable'>
+        <thead>
+            <tr>
+<th><spring:message code='Customer.custId.label' /></th>
+<th><spring:message code='Customer.address.label' /></th>
+<th><spring:message code='Customer.city.label' /></th>
+<th><spring:message code='Customer.custTypeCd.label' /></th>
+<th><spring:message code='Customer.fedId.label' /></th>
+<th><spring:message code='Customer.postalCode.label' /></th>
+<th><spring:message code='Customer.state.label' /></th>
+<th></th>
+			</tr>
+        </thead>
+        <tbody>
+			<c:forEach items='${customer}' var='item'>
+            <tr>
+<td>
+<c:out value='${item.custId}' />
+</td>
+<td>
+<c:out value='${item.address}' />
+</td>
+<td>
+<c:out value='${item.city}' />
+</td>
+<td>
+<c:out value='${item.custTypeCd}' />
+</td>
+<td>
+<c:out value='${item.fedId}' />
+</td>
+<td>
+<c:out value='${item.postalCode}' />
+</td>
+<td>
+<c:out value='${item.state}' />
+</td>
+<td><a href='/db/customerView?custId=${fn:escapeXml(item.custId)}'>View</a></td>
+			</tr>
+			</c:forEach>
+        </tbody>
+    </table>
+</div>		
+<hr/>
+<div class='btn-toolbar'>
+    <div class='btn-group'>
+        <a href='/db/customer/add' class='btn btn-primary'>Add New Record</a>
+    </div>
+    <div class='btn-group'>
+        <a href='/db/' class='btn btn-default'>Return</a>
+    </div>
+</div>	  
+</jsp:root>

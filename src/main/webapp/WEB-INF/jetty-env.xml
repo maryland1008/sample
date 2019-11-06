@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<!-- This file is a development artifact. It is for developers running jetty 
+	to configure the local Oracle data sources. -->
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+	<!-- Application DataSource -->
+	<New id="seivrDataSource" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg>jdbc/APP-DS</Arg>
+		<Arg>
+			<New class="oracle.jdbc.pool.OracleConnectionPoolDataSource">
+				<Set name="URL">jdbc:oracle:thin:@155.206.11.21:2021:dbd2</Set>
+				<Set name="User">hyang</Set>
+				<Set name="Password">zaq1xsw2cde3#004</Set>
+			</New>
+		</Arg>
+	</New>
+</Configure>
